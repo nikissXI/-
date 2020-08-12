@@ -3,10 +3,10 @@ import socket
 PORT = 23333
 
 if __name__ == "__main__":
-    players = ["10.6.0.3", "10.6.0.14", "10.6.0.1"]
-    #上面3个IP就是代表对谁发包，现在是对3，14号发包，只有他们会搜到房间
-    #要和谁玩就改谁的编号，10.6.0.这部分不要动！就改第四段数字就行
-    #空的地方填10.6.0.1
+    players = ["10.6.0.3", "10.6.0.16", ""]
+    #上面3个IP就是代表对谁发包，现在是对10.6.0.3，10.6.0.16发包，只有他们会搜到房间
+    #要和谁玩就填谁的虚拟局域网IP地址
+    #没有的就直接空着或者直接写网关地址
 
     hostRecv = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     hostRecv.setsockopt(socket.SOL_SOCKET, socket.SO_BROADCAST
